@@ -1,0 +1,6 @@
+# Why is the example.py a example of the Repository pattern?
+The `ContactRepository` class encapsulates the data access logic and provides a simple, consistent interface for the rest of the application to interact with. It manages a list of `Contact` objects and provides methods to add, update, delete, and retrieve contacts from the list.
+
+The `ContactRepository` class acts as an intermediary between the business logic layer (the console application) and the data access layer (the list of `Contact` objects). By using this class, we have separated the concerns of data access and storage from the rest of the application logic, which improves the overall maintainability, scalability, and testability of the application.
+
+The `ContactRepository` class is an implementation of the `Repository` pattern because it provides a clear separation between the data access layer and the rest of the application. It also enables the application to use different data sources and storage mechanisms in the future, without changing the code that interacts with the repository. For example, we could replace the list of `Contact` objects with a database or a web API without changing the interface of the `ContactRepository` class.
